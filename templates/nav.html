@@ -1,0 +1,83 @@
+<div class="nav-container">
+  <div class="navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark--custom">
+      <h2 class="screen_reader_only">Main Navigation</h2>
+      <div class="navbar-brand">
+        <img
+          class="nav--logo"
+          src="{{ url_for('static', filename='images/logo/logo-60px.png') }}"
+          srcset="{{ url_for('static', filename='images/logo/logo-60px.png') }} 1x, 
+                            {{ url_for('static', filename='images/logo/logo-120px.png') }} 2x, 
+                            {{ url_for('static', filename='images/logo/logo-180px.png') }} 3x"
+          alt="Site Logo"
+        />
+
+        <a class="nav__brand" href="{{ url_for('blog_app.index') }}">
+          {{ config['BLOG_NAME'] }}
+        </a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="menu-item-posts" class="nav-link nav__link" href="/"
+              >Posts <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a id="menu-item-about" class="nav-link nav__link" href="/about"
+              >About</a
+            >
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Projects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/projects/gallery/wings"
+                >Wings Photo Gallery
+              </a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a id="menu-item-contact" class="nav-link nav__link" href="/contact"
+              >Contact</a
+            >
+          </li>
+
+          {% if session.id %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('author_app.logout')}}"
+              >Logout</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

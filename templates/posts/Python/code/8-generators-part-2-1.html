@@ -1,0 +1,42 @@
+<div class="codehilite">
+  <pre><span></span><code><span class="k">class</span> <span class="nc">CustomRange</span><span class="p">():</span>
+  <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hi from __init__&quot;</span><span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">first</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">last</span> <span class="o">=</span> <span class="n">last</span>
+
+  <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hi from __iter__</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="bp">self</span>
+
+  <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi from __next__&quot;</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">CustomRange</span><span class="o">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">last</span><span class="p">:</span>
+          <span class="n">num</span> <span class="o">=</span> <span class="n">CustomRange</span><span class="o">.</span><span class="n">current</span>
+          <span class="n">CustomRange</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+          <span class="k">return</span> <span class="n">num</span>
+      <span class="k">raise</span> <span class="ne">StopIteration</span>
+
+
+<span class="n">rangeGen</span> <span class="o">=</span> <span class="n">CustomRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">custom_for</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+  <span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+  <span class="n">continueOn</span> <span class="o">=</span> <span class="kc">True</span>
+
+  <span class="k">while</span> <span class="n">continueOn</span><span class="p">:</span>
+      <span class="k">try</span><span class="p">:</span>
+          <span class="n">continueOn</span> <span class="o">=</span> <span class="kc">False</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;next(iterator)&#39;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterator</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+          <span class="n">continueOn</span> <span class="o">=</span> <span class="kc">True</span>
+      <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">That it.  We&#39;ve reached the end of the line.&quot;</span><span class="p">)</span>
+          <span class="k">break</span>
+
+
+<span class="n">custom_for</span><span class="p">(</span><span class="n">rangeGen</span><span class="p">)</span>
+</code></pre>
+</div>

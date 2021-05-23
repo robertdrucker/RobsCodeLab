@@ -1,0 +1,91 @@
+<section class="posts__list">
+  {% if category and not tag %}
+  <h2 class="site__heading-1">
+    Active Posts<span class="screen_reader_only">&mdash;</span
+    ><span class="posts__category-filter">Category: {{category}}</span>
+  </h2>
+  {% elif category and tag %}
+  <h2 class="site__heading-1">
+    Active Posts<span class="screen_reader_only">&mdash;</span
+    ><span class="posts__category-filter">Category: {{category}}</span
+    ><span class="screen_reader_only">, </span
+    ><span class="posts__category-filter">Tag: {{tag}}</span>
+  </h2>
+  {% elif tag %}
+  <h2 class="site__heading-1">
+    Active Posts<span class="screen_reader_only">&mdash;</span
+    ><span class="posts__category-filter">Tag: {{tag}}</span>
+  </h2>
+  {% else %}
+  <h2 class="site__heading-1">
+    Active Posts<span class="screen_reader_only">&mdash;</span
+    ><span class="posts__category-filter">Category: All</span>
+  </h2>
+  {% endif %} {% for post in posts.items %}
+  <div class="post__item">
+    <section class="post__intro">
+      <h2>
+        <a
+          class="site__heading-2 post__link"
+          href="{{ url_for('blog_app.article', slug=post.slug) }}"
+          >{{ post.title }}</a
+        >
+      </h2>
+
+      <!-- <div class="post__body">{{ post.body[:420]|markdown }}...</div> -->
+      <div class="post__body">{{ post.body|markdown }}</div>
+
+      <div class="post__info-box">
+        <span class="post__info"
+          >Posted by {{ post.author.full_name }} on {{
+          post.publish_date.strftime('%Y-%m-%d') }}</span
+        >
+
+        {% if post.category %}
+        <span class="post__info"
+          >Category:
+          <a
+            class="post__info-link post__link my-link"
+            href="{{ url_for('.category_by_name', category=post.category.name )}}"
+            >{{ post.category.name }}</a
+          ></span
+        >
+        {% if category %}
+        <span class="post__info"
+          >Tags: &nbsp;{% for tag in post.tags %}
+          <a
+            class="post__info-link post__link"
+            href="{{ url_for('.category_and_tag', category=category, tag=tag.name )}}"
+          >
+            {{ tag }}</a
+          >{% if not loop.last %},{% endif %} {% endfor %}</span
+        >
+        {% else %}
+        <span class="post__info"
+          >Tags: &nbsp;{% for tag in post.tags %}
+          <a
+            class="post__info-link post__link"
+            href="{{ url_for('.tags', tag=tag.name )}}"
+          >
+            {{ tag }}</a
+          >{% if not loop.last %},{% endif %} {% endfor %}</span
+        >
+        {% endif %} {% endif %}
+
+        <span class="post__info">Comments: {{post.comments.count()}}</span>
+      </div>
+    </section>
+
+    <div class="post__image">
+      {% if post.image %}
+      <img
+        class="posts__main-image"
+        alt="{{post.image_alt}}"
+        src="{{ url_for('static', filename='images/blog/posts/' + post.image + '-250px.png') }}"
+        srcset="{{ url_for('static', filename='images/blog/posts/' + post.image + '-250px.png') }} 1x, {{ url_for('static', filename='images/blog/posts/' + post.image + '-500px.png') }} 2x"
+      />
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

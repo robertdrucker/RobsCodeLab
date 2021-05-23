@@ -1,0 +1,48 @@
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+  <span class="n">pi_</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+  <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pi_</span><span class="o">/</span><span class="mi">8</span><span class="p">,</span> <span class="n">pi_</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">pi_</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">pi_</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">pi_</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">pi_</span><span class="p">)</span>
+  <span class="n">str_values</span> <span class="o">=</span> <span class="p">[]</span>
+  
+  <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+      <span class="c1"># Avoid division by zero error</span>
+      <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mf">0.001</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.001</span><span class="p">:</span>
+          <span class="n">str_val</span> <span class="o">=</span> <span class="s1">&#39;pi/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pi_</span> <span class="o">/</span> <span class="n">value</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="n">str_val</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+  
+      <span class="n">str_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">str_val</span><span class="p">)</span>
+  
+  
+  <span class="k">def</span> <span class="nf">find_values</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+      <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+          <span class="nb">print</span><span class="p">()</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*****************************************&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">INPUT&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*****************************************&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">()</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*****************************************&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">RESULTS&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*****************************************&#39;</span><span class="p">)</span>
+          <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">wrapper</span>
+  
+  
+  <span class="nd">@find_values</span>
+  <span class="k">def</span> <span class="nf">trig_func_comparison</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">str_values</span><span class="p">):</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;sin(</span><span class="si">{</span><span class="n">str_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">) = </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cos(</span><span class="si">{</span><span class="n">str_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">) = </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;tan(</span><span class="si">{</span><span class="n">str_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">) = </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">()</span>
+          <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+  
+  <span class="c1"># This is what is happening behind the scenes</span>
+  <span class="c1"># find_values(trig_func_comparison)(values, str_values)</span>
+  
+  
+  <span class="n">trig_func_comparison</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">str_values</span><span class="p">)</span>
+  </pre></div>
+  

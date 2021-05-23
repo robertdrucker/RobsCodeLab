@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %} Login | {{ config['BLOG_NAME'] }} {% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+
+  <section class="contact__box">
+    <h2 class="site__heading-1">Site Login</h2>
+
+    {% include 'messages.html' %}
+
+    {% from "/contact/_contact_form_helpers.html" import render_field %}
+
+    <div class="contact__content">
+
+      <div class="container-form1 container-form1--narrow">
+
+        <form method="POST" action="{{ url_for('.login')}}" class="form1">
+          {{ form.hidden_tag()  }}
+
+          <div class="form1__preface-container">
+            <p class="site__content-1">
+              You must be an approved administrator to log in.
+            </p>
+          </div>
+
+          <div class="form1__group">
+            {{ form.email.label(for='email', class="form1__label") }}
+            {{ render_field(form.email, class='form1__input') }}
+          </div>
+
+          <div class="form1__group">             
+            {{ form.password.label(for='password', class="form1__label") }}              
+            {{ render_field(form.password, class='form1__input') }}
+          </div> 
+
+  
+          <div class="form1__group form1__group--btn">
+            <!-- Here we will need a real btn element, not just an anchor element. 
+            This is because only a btn will let you submit the form. -->
+            <button type="submit" class="form1__btn form1__btn--green">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>        
+  </section>
+</div>
+
+{% endblock %}

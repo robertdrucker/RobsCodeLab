@@ -1,0 +1,121 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      An often overlooked aspect of good web design is ensuring that each page
+      has a proper HTML structure. In this post, we take a look at a simple
+      Table of Contents tool that can be used to check your page hierarchy from
+      the point of view of a screen reader. In addition, a few
+      &ldquo;best-practice&rdquo; rules are reviewed for ensuring a good page
+      layout, in terms of both structure and semantics.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        structural element, sectioning element, table of contents, HTML5
+        Outliner
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        Web crawlers and assistive technologies rely on the structure of your
+        web page to analyze and characterize it.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        Unorganized markup code will confuse screen readers and other assistive
+        technologies. A poor structure can also make it diffcult on web crawlers
+        and robots and hurt your SEO.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        There are tools available that can used to generate a Table of Contents
+        for any website page. Checking the Table of Contents is a must for
+        verifying that the structure of your code is as intended.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        A tool I generally use is the HTML5 Outliner (h5o) Google Chrome
+        extension. In addition to generating a Table of Contents for your page,
+        this tool checks for the presence of headings in each sectioning element
+        and will warn you if any are missing.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        There are five sectional elements in HTML5: <code>section</code>,
+        <code>nav</code>, <code>article</code>, and <code>aside</code>. Recall
+        that it is considered a best practice to always include a heading in
+        each sectioning element. The <code>body</code>, which is called a
+        &ldquo;sectioning root&rdquo;, should also contain a heading.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Another good rule to follow is to consider using structural element
+        instead of a <code>div</code> element. This should be done when the
+        enclosed content can better be classified by a structural element. For
+        example, an <code>article</code> should be used to embed a blog post.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        HTML5 structural elements include: <code>header</code>,
+        <code>nav</code>, <code>main</code>, <code>section</code>,
+        <code>article</code>, <code>figure</code>, and <code>footer</code>.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Note that each of five sectional elements are also structural elements,
+        but not all structural elemments are sectional elements.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section bm-1">
+    <h2 class="notes__heading">See This Page's Table of Contents</h2>
+    <p class="notes__summary notes__font-size-1">
+      Now, let's see how this page is structured. Just click the button below.
+      Doing so will run a customized version of the HTML5 Outliner (h5o) Google
+      Chrome extension and give a nice display.
+    </p>
+
+    <div id="toc"></div>
+
+    <p id="tocMsg" class="notes__summary notes__font-size-1 notes__tocMsg">
+      Great. With the Table of Contents displayed, you can see that this page
+      has a logical hierarchy and each sectioning content has a heading. This is
+      what the World Wide Web Consortium (W3C) likes to see!
+    </p>
+    <a
+      id="outline-btn"
+      class="notes__outline-btn"
+      href='javascript:(function(){var i=function(a){this.sections=[];this.startingNode=a};i.prototype={heading:false,append:function(a){a.container=this;this.sections.push(a)},asHTML:function(a){var b=u(this.heading);if(a)b=&apos;&lt;a href="#&apos;+v(this.startingNode)+&apos;"&gt;&apos;+b+"&lt;/a&gt;";return b+q(this.sections,a)}};var q=function(a,b){for(var f="",c=0;c&lt;a.length;c++)f+="&lt;li&gt;"+a[c].asHTML(b)+"&lt;/li&gt;";return f==""?f:"&lt;ol&gt;"+f+"&lt;/ol&gt;"},r=function(a){a=a.heading;return h(a)?j(a):1},u=function(a){if(h(a)){if(k(a)=="HGROUP")a=a.getElementsByTagName("h"+
+             -j(a))[0];return a.textContent||a.innerText||"&lt;i&gt;No text content inside "+a.nodeName+"&lt;/i&gt;"}return""+a},v=function(a){var b=a.getAttribute("id");if(b)return b;do b="h5o-"+ ++s;while(t.getElementById(b));a.setAttribute("id",b);return b},e,d,g,s,t,w=function(a,b,f){var c=a;a:for(;c;){b(c);if(c.firstChild){c=c.firstChild;continue a}for(;c;){f(c);if(c.nextSibling){c=c.nextSibling;continue a}c=c==a?null:c.parentNode}}},x=function(a){if(!h(o(g)))if(l(a)||m(a)){e!=null&amp;&amp;g.push(e);e=a;d=new i(a);e.outline=
+             {sections:[d],startingNode:a,asHTML:function(c){return q(this.sections,c)}}}else if(e!=null)if(h(a)){if(d.heading)if(j(a)&gt;=r(n(e.outline))){var b=new i(a);e.outline.sections.push(b);d=b;d.heading=a}else{b=false;var f=d;do{if(j(a)&lt;r(f)){b=new i(a);f.append(b);d=b;d.heading=a;b=true}f=f.container}while(!b)}else d.heading=a;g.push(a)}},y=function(a){var b=o(g);if(h(b))b==a&amp;&amp;g.pop();else{if((l(a)||m(a))&amp;&amp;!d.heading)d.heading="&lt;i&gt;Untitled "+k(a)+"&lt;/i&gt;";if(l(a)&amp;&amp;g.length&gt;0){e=g.pop();d=n(e.outline);for(b=
+             0;b&lt;a.outline.sections.length;b++)d.append(a.outline.sections[b])}else if(m(a)&amp;&amp;g.length&gt;0){e=g.pop();for(d=n(e.outline);d.sections.length&gt;0;)d=n(d)}else if(l(a)||m(a))d=e.outline.sections[0]}},k=function(a){return a.tagName.toUpperCase()},p=function(a){return function(b){return z(b)&amp;&amp;(new RegExp(a,"i")).test(k(b))}},m=p("^BLOCKQUOTE|BODY|DETAILS|FIELDSET|FIGURE|TD$"),l=p("^ARTICLE|ASIDE|NAV|SECTION$"),h=p("^H[1-6]|HGROUP$"),z=function(a){return a&amp;&amp;a.tagName},j=function(a){var b=k(a);if(b=="HGROUP")for(b=
+             1;b&lt;=6;b++){if(a.getElementsByTagName("H"+b).length&gt;0)return-b}else return-parseInt(b.substr(1))},n=function(a){return o(a.sections)},o=function(a){return a[a.length-1]};HTML5Outline=function(a){s=0;t=a.ownerDocument||window.document;d=e=null;g=[];w(a,x,y);return e!=null?e.outline:null}})();
+             ;(function(){var b=function(e,f){for(var d=0;d&lt;e.length;d++)e[d].setAttribute("style",f)},g=HTML5Outline(document.body).asHTML(true),a=document.createElement("div");a.setAttribute("id", "outline");b([a],"border:1px dotted #4d6fac;border-radius:3px;background-color:#f7f7f7;padding:15px;z-index:999;max-height:400px;overflow:auto;font-size:1.4rem;font-family:Lato, sans-serif;");a.innerHTML=g;b(a.getElementsByTagName("li"),"list-style:decimal outside;margin-left:20px;font-size:1.4rem;font-family:Lato, sans-serif;");
+             b(a.getElementsByTagName("ol"),"margin: 0;padding:0;font-size:1.4rem;font-family:Lato, sans-serif;");b(a.getElementsByTagName("a"),"color:#3d5889;text-decoration:none;font-size:1.4rem;font-family:Lato, sans-serif;");var c=a.insertBefore(outlineBtn=document.createElement("button"),a.firstChild);outlineBtn.setAttribute("class","notes__outlineCloseBtn");b([c]);c.innerHTML="Close";document.getElementById("tocMsg").style.display="block";c.onclick=function(){document.getElementById("toc").removeChild(a);a=c=null; notesBtn=document.getElementById("outline-btn");notesBtn.style.display="inline-block"; document.getElementById("tocMsg").style.display="none";};const toc=document.getElementById("toc"); toc.appendChild(a); notesBtn=document.getElementById("outline-btn");notesBtn.style.display="none";})();
+             ;'
+      title="TableDeMatiere"
+      >Generate Outline</a
+    >
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite>HTML5 Coding Essentials and Best Practices</cite>, an edX course
+        by Michael Buffa.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        <cite>HTML5 Outliner</cite>, a Chrome extension
+      </li>
+    </ol>
+  </section>
+</div>
+
+<script></script>

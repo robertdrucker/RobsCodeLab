@@ -1,0 +1,63 @@
+<div class="codehilite">
+  <pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">newton_raphson_solve</span> <span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">func_eval</span><span class="p">,</span> <span class="n">der_eval</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">high</span> <span class="o">=</span> <span class="n">num</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">high</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">low</span> <span class="o">=</span> <span class="n">num</span>
+
+    <span class="n">guess</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">f_x</span> <span class="o">=</span> <span class="n">func_eval</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">-</span> <span class="n">num</span>
+    <span class="n">f_prime_x</span> <span class="o">=</span> <span class="n">der_eval</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">f_x</span><span class="p">)</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">epsilon</span> <span class="ow">and</span> <span class="n">num_iterations</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
+          <span class="n">guess</span> <span class="o">=</span> <span class="n">guess</span> <span class="o">-</span> <span class="n">f_x</span> <span class="o">/</span> <span class="n">f_prime_x</span>
+          <span class="n">f_x</span> <span class="o">=</span> <span class="n">func_eval</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">-</span> <span class="n">num</span>
+          <span class="n">f_prime_x</span> <span class="o">=</span> <span class="n">der_eval</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+          <span class="n">num_iterations</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span><span class="p">((</span><span class="n">guess</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">create_function_evals</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+    <span class="c1"># returns a tuple consisting of two lambda expressions</span>
+        <span class="k">return</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">guess</span><span class="p">:</span> <span class="n">guess</span><span class="o">**</span><span class="n">root</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">guess</span><span class="p">:</span> <span class="n">root</span> <span class="o">*</span> <span class="n">guess</span> <span class="o">**</span> <span class="p">(</span><span class="n">root</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">root_finder</span> <span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    root can be any number greater than or equal to 1.</span>
+<span class="sd">    num can be any number.</span>
+<span class="sd">    returns a number x such that abs(x ** root - num) is within epsilon</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">root</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
+
+    <span class="n">func_evals</span> <span class="o">=</span> <span class="n">create_function_evals</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">newton_raphson_solve</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">func_evals</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">func_evals</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">epsilon</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">epsilon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="n">answer</span><span class="p">,</span> <span class="n">num_iterations</span> <span class="o">=</span> <span class="p">(</span><span class="n">root_finder</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">answer</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The answer is </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;It took </span><span class="si">{</span><span class="n">num_iterations</span><span class="si">}</span><span class="s1"> iterations&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No answer could be determined&#39;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect number of arguments.  Exactly three must be provided.&#39;</span><span class="p">)</span>
+</pre>
+</div>

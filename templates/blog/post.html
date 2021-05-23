@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %} Login | {{ config['BLOG_NAME'] }} {% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+
+    <section class="contact__box">
+
+        {% if action=="new" %}
+        <h2 class="site__heading-1">New Blog Post</h2>
+        {% else %}
+        <h2 class="site__heading-1">Edit Blog Post</h2>
+        {% endif %}
+
+        {% include 'messages.html' %}
+
+        {% from "_formhelpers.html" import render_field %}
+
+        <div class="contact__content">
+
+            <div class="container-form1">
+
+                {% from "_formhelpers.html" import render_field %}
+
+                {% if action=="new" %}
+                <form method="POST" action="{{ url_for('.post') }}" class="form1" enctype="multipart/form-data" role="form">
+                {% else %}
+                <form method="POST" action="{{ url_for('.edit', slug=post.slug) }}" class="form1" enctype="multipart/form-data" role="form">
+                {% endif %}
+
+                    {{ form.hidden_tag() }}
+
+                    <div class="form1__group">
+                        {{ form.image.label(for='image', class="form1__label") }}
+                        {{ render_field(form.image, class='form1__input') }}
+                    </div>
+
+                    <div class="form1__group">
+                        {{ form.title.label(for='title', class="form1__label") }}
+                        {{ render_field(form.title, class='form1__input') }}
+                    </div>
+
+                    <div class="form1__group">
+                        {{ form.body.label(for='body', class="form1__label") }}
+                        {{ render_field(form.body, class='form1__input', rows=10) }}
+                    </div>
+                    
+                    <div class="form1__group">
+                        {{ form.category.label(for='category', class="form1__label") }}
+                        {{ render_field(form.category, class='form1__input') }}
+                    </div> 
+
+                    <div class="form1__group">
+                        {{ form.new_category.label(for='new_category', class="form1__label") }}
+                        {{ render_field(form.new_category, class='form1__input') }}
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form1__label" for="tags_field">Tags</label>
+                        <input class='form1__input' id="tags_field" name="tags_field" type="text" value="{{ tags_field }}">
+                    </div>
+
+                    <div class="form1__group form1__group--btn">            
+                        {% if action=="new" %}
+                            <button type="submit" class="form1__btn form1__btn--green">Post</button>
+                            {% else %}
+                            <button type="submit" class="form1__btn form1__btn--green">Update</button>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </section>
+</div>
+
+{% endblock %}

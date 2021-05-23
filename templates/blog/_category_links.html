@@ -1,0 +1,43 @@
+<div class="categories__container">
+  <nav class="categories__wrapper">
+    <h2 class="screen_reader_only">Blog Navigation</h2>
+    <a id="category-all" class="categories__link" href="{{url_for('.index')}}"
+      >All</a
+    >
+
+    <a
+      id="category-css"
+      class="categories__link"
+      href="{{url_for('.category_by_name', category='CSS')}}"
+      >CSS</a
+    >
+
+    <a
+      id="category-html"
+      class="categories__link"
+      href="{{url_for('.category_by_name', category='HTML')}}"
+      >HTML</a
+    >
+
+    <a
+      id="category-js"
+      class="categories__link"
+      href="{{url_for('.category_by_name', category='JavaScript')}}"
+      >JS</a
+    >
+
+    <a
+      id="category-python"
+      class="categories__link"
+      href="{{url_for('.category_by_name', category='Python')}}"
+      >Python</a
+    >
+
+    <a
+      id="category-sql"
+      class="categories__link"
+      href="{{url_for('.category_by_name', category='SQL')}}"
+      >SQL</a
+    >
+  </nav>
+</div>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | {{ config['BLOG_NAME'] }}{% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+  <div class="container-page">
+    <div class="posts__box">
+      {% include 'blog/_category_links.html' %}
+      {% include '_flashmessages.html' %}
+      {% include 'blog/_article_list.html' %}
+      {% if category and not tag %}
+       {% include 'blog/_pagination_with_category.html' %}
+      {% elif category and tag %}
+        {% include 'blog/_pagination_with_category_tag.html' %}
+      {% elif not category and tag %}
+        {% include 'blog/_pagination_with_tag.html' %}
+      {% else %}
+        {% include 'blog/_pagination.html' %}
+     {% endif %}
+    </div>
+  </div>
+{% endblock %}

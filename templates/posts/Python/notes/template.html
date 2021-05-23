@@ -1,0 +1,103 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      A <span class="boldit">decorator</span> can be used in Python to enhance
+      the functionality of a function without changing the function. The code in
+      this post utilizes a decorator to enhance or &ldquo;prettify&rdquo; a
+      function that compares the output of three different trigonometric
+      functions across a given set of values.
+    </p>
+    <p class="notes__summary notes__font-size-1">
+      The example given here also provides a good illustrtion of how the
+      <span class="boldit">unpacking operator</span> * is used. This operator
+      allows a variable number of positional arguments to be passed into a
+      function.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">Decorator</li>
+      <li class="notes__key-words-item notes__font-size-1">
+        Unpacking operator
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        Note that a decorator is a higher order function because it accepts
+        another function as an argument.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        In Python, functions are first-class objects:
+        <ul class="notes__list notes__list--secondary">
+          <li class="notes__list-item notes__list-item--secondary">
+            Treated like any other object
+          </li>
+          <li class="notes__list-item notes__list-item--secondary">
+            Have types
+          </li>
+          <li class="notes__list-item notes__list-item--secondary">
+            Can be used in expressions
+          </li>
+          <li class="notes__list-item notes__list-item--secondary">
+            Can be passed to or return by functions.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Definitions</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">Lorem ipsum</li>
+      <li class="notes__list-item notes__font-size-1">Lorem ipsum</li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">Lorem ipsum</li>
+      <li class="notes__list-item notes__font-size-1">Lorem ipsum</li>
+    </ol>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Images</h2>
+    <figure class="notes__figure notes__figure--med">
+      <img
+        class="notes__image notes__image--med notes__image--with-border"
+        alt="alt info"
+        src="{{ url_for('static', filename='images/blog/notes/20-decorators/linda-ronstadt.jpg') }}"
+        srcset="{{ url_for('static', filename='images/blog/notes/20-decorators/linda-ronstadt.jpg') }} 1x, {{ url_for('static', filename='images/blog/notes/20-decorators/linda-ronstadt.jpg') }} 2x"
+      />
+      <figcaption class="notes__figcaption-box">
+        <p class="notes__figcaption">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <div>
+    <section class="notes__section">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">Figure 1: Decorators In Action</h2>
+        <details>
+          <summary class="notes__details-summary">
+            Figure 1 - Decorators
+          </summary>
+          {% include 'posts/Python/code/%s-1.html' % post.slug %}
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

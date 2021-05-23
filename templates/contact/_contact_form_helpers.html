@@ -1,0 +1,25 @@
+<!-- 
+  * This is via the Jinja templatating engine.
+  * We pass in a WT Form field object to the render_field function.
+-->
+
+{% macro render_field(field) %}
+<div class="form-group">
+  <!-- 
+    * Display the field.
+    * Output the field's content with any keyword arguments we want to pass.
+    * safe marks the input as safe and tells the macro not to escape it.
+    * Keyword arguments can be a class for styling or other custom parameters.
+    * Example: kwargs = {'class': 'form1__input'}
+  -->
+  {{ field(**kwargs)|safe }}
+
+  {% if field.errors %}
+    <ul class="text-danger">
+    {% for error in field.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+{% endmacro %}

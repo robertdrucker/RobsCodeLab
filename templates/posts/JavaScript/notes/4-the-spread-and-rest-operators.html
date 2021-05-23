@@ -1,0 +1,90 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      There is quite a bit to know about the rest parameter and the spread
+      syntax. Rather than dive into all use cases, here the basic functionality
+      behind each operator is reviewed. Thus, the content below covers
+      sufficient ground to understand typical usage of the spread and rest
+      operators in JavaScript applications.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">spread operator</li>
+      <li class="notes__key-words-item notes__font-size-1">rest operator</li>
+      <li class="notes__key-words-item notes__font-size-1">formal parameter</li>
+      <li class="notes__key-words-item notes__font-size-1">actual parameter</li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        Both the <span class="boldit">spread</span> and the
+        <span class="boldit">rest</span> operators were introduced in ES6. Each
+        is denoted by three consecutive dots(...), and the meaning of these
+        three dots depends upon the context.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        As shown in the accompanying code, when used inside of an array, the
+        spread operator is used to extract all elements from another array in a
+        clean fashion. Likewise, when used inside of an object, the spread
+        operator is used to extract all properties from another object.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        In contrast, the rest operator, or rest parameter as it is sometimes
+        called, is used as a
+        <span class="italicize">formal parameter</span> to a function. In this
+        context, it merges a list of
+        <span class="italicize">actual parameters</span> inside of function call
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        All of this is best understood by looking at a few examples. So, let's
+        dive in.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite>React - The Complete Guide</cite>, by Academind
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section notes__section--code">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">
+          Figure 1 - The Spread and Rest Operators
+        </h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - The Spread and Rest Operators
+          </summary>
+          {% include 'posts/JavaScript/code/%s-1.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="Invocation of the-spread-and-rest-opertors.js and output via the command line"
+              src="{{ url_for('static', filename='images/blog/code_output/JavaScript/4_the_spread_and_rest_operators/spread_and_rest_operators_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/JavaScript/4_the_spread_and_rest_operators/spread_and_rest_operators_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/JavaScript/4_the_spread_and_rest_operators/spread_and_rest_operators_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of spread-and-rest-operators.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

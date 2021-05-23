@@ -1,0 +1,41 @@
+<div class="codehilite">
+  <pre>
+  <span class="c1">// The spread operator used to extract</span>
+  <span class="c1">// all elements from an array</span>
+  <span class="kd">const</span> <span class="nx">albumsListOne</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Let it Bleed&#39;</span><span class="p">,</span> <span class="s1">&#39;Abbey Road&#39;</span><span class="p">,</span> <span class="s1">&#39;Houses of the Holy&#39;</span><span class="p">];</span>
+  <span class="kd">const</span> <span class="nx">albumsListTwo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tusk&#39;</span><span class="p">,</span> <span class="s1">&#39;All Things Must Pass&#39;</span><span class="p">,</span> <span class="s1">&#39;Octave&#39;</span><span class="p">];</span>
+  
+  <span class="kd">const</span> <span class="nx">allAlbums</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">albumsListOne</span><span class="p">,</span> <span class="p">...</span><span class="nx">albumsListTwo</span><span class="p">,</span> <span class="s1">&#39;Book of Dreams&#39;</span><span class="p">];</span>
+  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;\nAll albums:&#39;</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allAlbums</span><span class="p">);</span>
+  
+  <span class="c1">// The spread operator used to extract</span>
+  <span class="c1">// all properties from an object</span>
+  <span class="kd">const</span> <span class="nx">partialProfile</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Greg Park&#39;</span><span class="p">,</span>
+    <span class="nx">occupation</span><span class="o">:</span> <span class="s1">&#39;electrician&#39;</span><span class="p">,</span>
+  <span class="p">};</span>
+  
+  <span class="kd">const</span> <span class="nx">fullProfile</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">partialProfile</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">28</span><span class="p">,</span>
+  <span class="p">};</span>
+  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;\nFull profile:&#39;</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fullProfile</span><span class="p">);</span>
+  
+  <span class="c1">// The rest operator merges a list of function arguments into an array.</span>
+  <span class="c1">// ...args must be the last formal argument because it collects</span>
+  <span class="c1">// all of the remaining arguments.</span>
+  
+  <span class="kd">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">(</span><span class="nx">manager</span><span class="p">,</span> <span class="nx">leader</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;\nargs:&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;\nmanager:&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">manager</span><span class="p">);</span>
+  <span class="p">};</span>
+  
+  <span class="nx">names</span><span class="p">(</span><span class="s1">&#39;Susan&#39;</span><span class="p">,</span> <span class="s1">&#39;Kate&#39;</span><span class="p">,</span> <span class="s1">&#39;Janis&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Mike&#39;</span><span class="p">);</span>
+  </pre>
+</div>

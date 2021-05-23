@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Posts with Tag: {{ title }} | {{ config['BLOG_NAME'] }}{% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+  <div class="container-posts">
+    <h2 class="posts--heading">Posts<br><span class="posts--sub-heading">Selected Tag: {{ title }}</span></h2>
+    {% include '_flashmessages.html' %}
+    {% include 'blog/_article_list.html' %}
+
+      <!-- pagination -->  
+    <div class="blog--pagination">
+      {% if posts.has_prev %}
+        <a href="{{ url_for('blog_app.tags', tag=tag, page=posts.prev_num) }}">&lt;&lt; Newer posts</a>
+      {% endif %}
+      {% if posts.has_next %}
+        <a href="{{ url_for('blog_app.tags', tag=tag, page=posts.next_num) }}">Older posts &gt;&gt;</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

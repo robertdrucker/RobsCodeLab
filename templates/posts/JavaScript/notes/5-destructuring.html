@@ -1,0 +1,101 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      <p class="notes__summary notes__font-size-1">In this post we take a look at how destructuring can be used to conveniently unpack values from arrays, or properties from objects, into distinct variables. </p>
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">destructuring</li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        Destructuring is an ES6 feature, and it can be used with arrays, object literals, and class instances.
+      </li>
+      <li class="notes__list-item notes__font-size-1">IMPORTANT: When destructuring is applied to a method of an instance, the <code>this</code> context will be lost unless it is binded to the method.  The code below shows one way to do this.</li>
+    </ul>
+  </section>
+
+  <div>
+    <section class="notes__section notes__section--code">
+      <h2 class="notes__heading">Code</h2>
+
+      <section>
+        <h2 class="screen_reader_only">Figure 1 - Destructuring with an Array</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - Destructuring with an Array
+          </summary>
+          {% include 'posts/JavaScript/code/%s-1.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="output from Invocation destructuring_with_an_array.js"
+              src="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_array_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_array_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_array_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of destructuring_with_an_array.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+
+      <section>
+        <h2 class="screen_reader_only">Figure 2 - Destructuring with an Object Literal</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 2 - Destructuring with an Object Literal
+          </summary>
+          {% include 'posts/JavaScript/code/%s-1.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="output from destructuring_with_an_object_literal.js"
+              src="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_object_literal_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_object_literal_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_object_literal_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of destructuring_with_an_object_literal.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+
+      <section>
+        <h2 class="screen_reader_only">Figure 3 - Destructuing with an Instance</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 3 - Destructuring with an Instance
+          </summary>
+          {% include 'posts/JavaScript/code/%s-1.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="output from destructuring_with_an_instance.js"
+              src="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_instance_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_instance_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/JavaScript/5_destructuring/destructuring_with_an_instance_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of destructuring_with_an_instance.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>      
+
+    </section>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block title %}{{ post.title }} | {{
+config['BLOG_NAME'] }} {% endblock %} {% block nav %}{% include 'nav.html' %}{%
+endblock %} {% block content %}
+
+<div class="container-page container-page--2">
+  <section class="posts__box">
+    <figure class="post__main-figure post__main-figure--400">
+      <img
+        class="post__main-image"
+        alt="{{post.image_alt}}"
+        src="{{ url_for('static', filename='images/blog/posts/' + post.image + '-400px.png') }}"
+        srcset="{{ url_for('static', filename='images/blog/posts/' + post.image + '-400px.png') }} 1x, {{ url_for('static', filename='images/blog/posts/' + post.image + '-800px.png') }} 2x"
+      />
+    </figure>
+
+    <h2 class="site__heading-1">{{ post.title }}</h2>
+
+    {% include "posts/" + category + "/notes/%s.html" % post.slug %}
+    <!-- {{ post.body|markdown }} -->
+
+    <div class="post__double-border post__double-border--1"></div>
+    <div class="post__double-border post__double-border--2"></div>
+
+    <div class="post__meta-data text-muted">
+      <span class="post__info"
+        >Posted by {{ post.author.full_name }} on {{
+        post.publish_date.strftime('%Y-%m-%d') }}</span
+      >
+
+      {% if post.category %}
+      <span class="post__info"
+        >Category:
+        <a
+          class="post__info-link post__link post__category-link"
+          href="{{ url_for('.category_by_name', category=post.category.name )}}"
+          >{{ post.category.name }}</a
+        ></span
+      >
+      <span class="post__info"
+        >Tags: &nbsp;{% for tag in post.tags %}
+        <a class="post__link" href="{{ url_for('.tags', tag=tag.name )}}">
+          {{ tag }}</a
+        >{% if not loop.last %},{% endif %} {% endfor %}</span
+      >
+      {% endif %}
+
+      <span class="post__info">Comments: {{comments_total}}</span>
+
+      {% if session.id %}
+      <span class="post__info"
+        >Admin:
+        <a class="post__link" href="{{ url_for('.edit', slug=post.slug) }}"
+          >Edit</a
+        ></span
+      >
+      <span class="post__info"
+        >Admin:
+        <a class="post__link" href="{{ url_for('.delete', slug=post.slug) }}"
+          >Delete</a
+        ></span
+      >
+      {% endif %}
+    </div>
+
+    <div class="post__double-border post__double-border--3"></div>
+    <div class="post__double-border post__double-border--4"></div>
+
+    <section id="message" class="post__comment-btn-box">
+      <h2 class="screen_reader_only">Add Comment</h2>
+      <button class="post__comment-btn" id="toggle-comment-form" type="button">
+        Add Comment
+      </button>
+    </section>
+
+    {% include '_flashmessages.html' %} {% include '/blog/_comment_form.html' %}
+    {% include '/blog/_comments_list.html' %}
+  </section>
+</div>
+{% endblock %}

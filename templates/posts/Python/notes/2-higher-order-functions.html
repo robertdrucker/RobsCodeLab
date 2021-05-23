@@ -1,0 +1,108 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      In this post the concepts of first-class objects, higher order
+      programming, lambda expressions, and abstraction are explored. These
+      concepts are applied to a Root Finding program that uses the
+      Newton-Raphson method.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">first-class object</li>
+      <li class="notes__key-words-item notes__font-size-1">
+        higher-order programming
+      </li>
+      <li class="notes__key-words-item notes__font-size-1">lamda expression</li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        In Python, functions are
+        <span class="boldit">first-class objects</span>. As such, they can be
+        used just like objects of other types. They can be referenced in an
+        expression, used as a function argument, returned by a function, etc.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Related to first-class objects is the concept of
+        <span class="boldit">higher-order programming</span>. This style of
+        coding involves passing a function or a
+        <span class="boldit">lambda expression</span> as an argument into
+        another function. The key idea here is that higher-order programming
+        allows us to make functions more general.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        The code below shows a good example of how first-class functions,
+        higher-order functions, and lambda expressions relate to each other and
+        can be used in Python.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        In the code example, the Newton-Raphson method is used to approximate
+        the root of a number such that
+        <code>abs(guess ** root - number)</code> is less than epsilon. The
+        variables root, nummber, and epsilon are entered via the command line.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        Note the role of abstraction and encapsulation here, also. The method of
+        calculation does not need to be advertised or known by the user.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        Revisit the example code in the future and add better error checking and
+        handling.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite>Introduction to Computation and Programming Using Python</cite>,
+        by John V. Guttag
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        <cite>Applied Numerical Methods with Personal Computers</cite>, by Alkis
+        Contantinides
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section">
+      <h2 class="notes__heading">Code</h2>
+
+      <section>
+        <h2 class="screen_reader_only">Figure 1 - Root Finder</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - Root Finder
+          </summary>
+
+          {% include 'posts/Python/code/%s-1.html' % post.slug %}
+
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="Invocation of root_finder.py and output"
+              src="{{ url_for('static', filename='images/blog/code_output/Python/2_higher_order_functions/root_finder_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/Python/2_higher_order_functions/root_finder_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/Python/2_higher_order_functions/root_finder_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">Invocation of root_finder.py</p>
+              <p class="notes__figcaption">
+                Note this program is run from the command line with three
+                parameters, root, number, and epsilon.
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

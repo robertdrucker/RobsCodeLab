@@ -1,0 +1,114 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      This post is the first of a two-part series about the Python generator.
+      Here, the characteristics of a generator are reviewed, and we see how to
+      create a generator function using a yield statement. Additionally, we take
+      a look at how a <code>for</code> loop, under the hood, iterates over a
+      generator.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        generator, yield, iterable, iterator protocol, lazy iterator
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        You have seen what a generator does. It is invoked; it runs until a
+        <code>yield</code> statement is executed; it returns the value of an
+        expression in the <code>yield</code> statement; and it moves on to the
+        next iteration when a <code>next</code> statement is executed.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        But, how is a custom generator constructed? The simple way is to just
+        incorporate a <code>yield</code> statement into a function. This is what
+        is done in the accompanying code.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Or, you can get more elaborate and build a generator from scratch using
+        a class (we'll do this in Part 2).
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Any function definition with a <code>yield</code> statement is a
+        generator.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        A generator returns an iterator object with a sequence of values.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        The <code>yield</code> statement halts the generator and returns a value
+        through an expression.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        Generators are iterable, but not all iterables are generators. For
+        example, the <code>range</code> function is a generator. The
+        <code>list</code> object is iterable, but it is not a generator.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        Since a generator is an iterable, it can be looped over. However, where
+        as a list stores all of its values in memory, a generator only computes
+        and stores a single value at a time. For this reason, we say that a
+        generator returns a <span class="boldit">lazy iterator</span>.
+      </li>
+      <li class="notes__notes-item notes__font-size-1">
+        Because of their unique properties, a generator generally runs fast and
+        is memory efficient.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite
+          >Introduction to Computation and Programming Using Python, third
+          edition</cite
+        >, 10.3.1, by John V. Guttag
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        <cite>Complete Python Developer in 2021</cite>, Section 10:
+        <cite>Advanced Python: Generators</cite>, by Zero to Mastery
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section notes__section--code">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">Figure 1 - Generators, Part 1</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - Generators, Part 1
+          </summary>
+          {% include 'posts/Python/code/%s-1.html' % post.slug %}
+
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="Invocation of generators_part_1.py and output"
+              src="{{ url_for('static', filename='images/blog/code_output/Python/3_generators_part_1/generators_part_1_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/Python/3_generators_part_1/generators_part_1_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/Python/notes/3_generators_part_1/generators_part_1_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of generators_part_1.py
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}404 Error | Rob's Code Lab{% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page  container-page--404-error">
+
+    <div class="error-404__container">
+        <p class="error-404__message error-404__message--top">Sorry...</p>
+        <p class="error-404__message">Our entire network was searched, and the page you requested could not be found.  Please try another page request or select from the site navigation menu above.  If you would like, you can navigate to the home page <a class="error-404__link" href="\">here</a>.</p>
+       
+    </div>
+</div>
+
+{% endblock %}

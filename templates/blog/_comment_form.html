@@ -1,0 +1,39 @@
+<div id="add-comment__container" class="add-comment__container">
+  
+    {% from "/contact/_contact_form_helpers.html" import render_field %}
+  
+  
+    <div class="container-form1 container-form1--comments">
+
+        <form method="POST" action="{{ url_for('.article', slug=post.slug) }}" enctype="multipart/form-data" class="form1">
+            {{ form.hidden_tag()  }}
+
+            <div class="form1__preface-box">
+                <p class="form1__preface">Do you have something you would like to share with other readers of this site?  Please let us know your thoughts.</p>
+            </div>
+
+            <div class="form1__group">
+                {{ form.name.label(for='form1__name', class="form1__label") }}
+                {{ render_field(form.name, class='form1__input', id='form1__name') }}
+            </div>
+
+            <div class="form1__group">             
+                {{ form.email.label(for='form1__email', class="form1__label") }}              
+                {{ render_field(form.email, class='form1__input', id='form1__email') }}
+            </div> 
+
+            <div class="form1__group"> 
+                {{ form.comment.label(for='form1__comment', class="form1__label") }}   
+                {{ render_field(form.comment, class='form1__input form1__input--textarea', id='form1__comment') }}
+            </div> 
+    
+            <div class="form1__group form1__group--btn">
+                <button type="submit" class="form1__btn form1__btn--green" id="form1__btn">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+  </div> 
+
+

@@ -1,0 +1,102 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      The code in this post utilizes a decorator to &ldquo;prettify&rdquo; a
+      function that compares the output of three different trigonometric
+      functions across a given set of values. The example given here also
+      provides a good illustration of how the unpacking operator * is used.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">Decorator</li>
+      <li class="notes__key-words-item notes__font-size-1">
+        Unpacking operator
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        You can think of the decorator as a design pattern in Python that allows
+        us to wrap a function and enhance its behavior without changing it. You
+        can see this in the included programming code.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Pay attention to how the decorated function,
+        <span class="italicize">trig_func_comparison</span>, gets sandwiched in
+        a wrapper that has supplementary print statements.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Also, note how variable passing is accomplished with the unpacking
+        operator. Concentrate on <code>*args</code>, here. This is for
+        positional arguments. The other one, <code>*kwargs</code>, is for
+        keyword arguments, and there are none in the example code.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        I included <code>*kwargs</code> as an argument to the wrapper function
+        only to be consistent with the decorator design pattern commonly used.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        Their are many uses of decorators. For example, a decorator can be used
+        to compare the relative processing time of two different functions.
+        Frameworks, such as Flask and Django, also use decorators for such tasks
+        as user authentication and routing.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Definitions</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        A <span class="boldit">decorator</span> is a function that accepts
+        another function as an argument, wraps the input function, and
+        essentially injects additional functionality into it.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite>Complete Python Developer in 2021</cite>, Section 8:
+        <cite>Advanced Python: Decorators</cite>, by Zero to Mastery
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">Figure 1 - Trig Decorator</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - Trig Decorator
+          </summary>
+
+          {% include 'posts/Python/code/%s-1.html' % post.slug %}
+
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="output from trig_decorator.py"
+              src="{{ url_for('static', filename='images/blog/code_output/Python/1_decorators/trig_decorator_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/Python/1_decorators/trig_decorator_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/Python/1_decorators/trig_decorator-600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">Invocation of trig_decorator.py</p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

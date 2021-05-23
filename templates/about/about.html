@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}About | {{ config['BLOG_NAME'] }} {% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+  <section class="posts__box">
+    <h2 class="site__heading-1">About</h2>
+
+    <div class="about__content-box">
+      <div class="about__sec1">
+
+        <section class="about__content">
+          <h3 class="site__heading-2">Site Purpose</h3>
+          <p class="site__content-1"><cite>Rob's Code Lab</cite> serves as a personal journal for keeping track of lessons learned about web development and computational problem solving. It also functions as a virtual laboratory where selected code snippets can be methodically reviewed, investigated, and analyzed. Thus, this is a place to reflect upon code, ingrain key programming concepts, and become a better developer.</p>
+        </section>
+
+        <section class="about__content">
+          <h3 class="site__heading-2">For All</h3>
+          <p class="site__content-1">Although this site functions as a personal code lab, I made it public to encourage information exchange with other coders.  I find that holding discussions with other web developers is one of best ways to enhance programming skills.</p>
+        </section>
+
+        <!-- <section class="about__content">
+          <h3 class="site__heading-2">Design and Development</h3>
+          <p class="site__content-1">This first stage of this site was built using HTML5, Python, the Flask framework, MySQL, JavaScript, and SASS.  Several libraries were also utilized, including Bootstrap, WTForms and SQLAlchemy.  For high maintainability and scalability, the site structure incorporates blueprints, object models, object relation mapping (ORM), and template inheritance.  It also adheres to W3C specifications.</p>
+        </section> -->
+
+        <section class="about__content about__content--nopad">
+          <h3 class="site__heading-2">Features</h3>
+          <p class="site__content-1">At the heart of this website is a full-feature blog and comment system, and there are individual blogs devoted to developing with CSS, HTML5, JavaScript, PHP, Python, and SQL. Each of these is a core language or scripting tool I regularly use for building web applications.</p>
+
+          <p class="site__content-1">Since <cite>Rob's Code Lab</cite> is new, it does not yet have a lot of content.  However, I will be adding new coding notes regularly, and additional features are planned.  These include course reviews, book reviews, and expanded coverage of web-app languages, libraries, and frameworks.</p>          
+        </section>
+
+      </div>
+
+      <div class="about__sec2">
+        <img 
+          class="about__image" 
+          alt="Robert Drucker coding at his work table"
+          src="{{ url_for('static', filename='images/about/about-photo-500px.jpeg') }}"
+          srcset="{{ url_for('static', filename='images/about/about-photo-500px.jpeg') }} 1x, {{ url_for('static', filename='images/about/about-photo-1000px.jpeg') }} 2x" 
+        > 
+        <section class="about__content">
+          <h3 class="site__heading-2">A Short Bio</h3>
+          <p class="site__content-1">Hi! I am Robert Drucker, the designer and developer of this site. After working in the chemical industry as a process engineer and manager for several years, I developed a love for building websites. I have built web applications with various programming languages, libraries, and frameworks.  These include PHP, Python/Flask, JavaScript, React, and NodeJS.</p>
+
+          <p class="site__content-1">Professionally, my definite chief aim is to work with a team to build better websites.  I also strive to keep learning and improving.  I am from Louisville, Kentucky and currently reside with my family in Charleston, South Carolina.</p>
+
+  
+        </section>
+      </div>
+    </div>        
+  </section>
+</div>
+
+
+{% endblock %}

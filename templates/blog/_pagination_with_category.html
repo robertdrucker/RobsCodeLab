@@ -1,0 +1,12 @@
+{% if posts.has_prev or posts.has_next %}
+  <section class="posts__pagination-box">
+    {% if posts.has_prev %}
+    <h2 class="screen_reader_only">Newer Posts</h2>
+    <a class="posts__link posts__pagination-link" href="{{ url_for('blog_app.category_by_name', category='Python', page=posts.prev_num) }}">&lt;&lt; Newer Posts</a>
+    {% endif %}
+    {% if posts.has_next %}
+    <h2 class="screen_reader_only">Older Posts</h2>
+    <a class="posts__link posts__pagination-link" href="{{ url_for('blog_app.category_by_name', category='Python', page=posts.next_num) }}">Older Posts &gt;&gt;</a>
+    {% endif %}
+  </section>
+{% endif %}

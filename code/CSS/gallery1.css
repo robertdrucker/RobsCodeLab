@@ -1,0 +1,185 @@
+/* Universal selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+html {
+  /* Root font size setting.
+  This defines what 1rem is.
+  But this setting does not effect em and rem in media queries.
+  1 rem or 1em in a media query is always equal to the font size
+  which is coming from the browser (16px by default).
+  In media queries, use em instead of rem, because rem fails
+  to work in some of the browsers. */
+  font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
+  margin: 0;
+  padding: 0;
+}
+
+/* 1200 px */
+@media only screen and (min-width: 49.9em) and (max-width: 75em) {
+  html {
+    font-size: 59.5%;
+  }
+}
+
+/* 800 px */
+@media only screen and (max-width: 49.9em) {
+  html {
+    font-size: 56.5%;
+  }
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* Utilities */
+.screen_reader_only {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* Document container */
+.container-page {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* CSS for Image Gallery Proper */
+.gallery1 {
+  padding-top: 3.2rem;
+  max-width: 122rem;
+  margin: 0 auto;
+}
+
+.gallery1__container {
+  padding: 0.8rem;
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.6rem;
+  align-items: center;
+  /* max-width: 122rem; */
+  margin: 0 auto;
+}
+
+.gallery1__figcaption {
+  font-size: 1.5rem;
+  padding: 0.3rem 0 0 0;
+  margin: 0;
+}
+
+.gallery1__heading {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery1__heading--small {
+  display: block;
+  font-size: 3rem;
+}
+
+.gallery1__image {
+  width: 100%;
+}
+
+.gallery1__image-hide {
+  display: none;
+}
+
+.gallery1__item {
+  border: 1px solid grey;
+  height: 100%;
+  padding: 1.6rem;
+}
+
+.gallery1__notes {
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery1__notes:link, .gallery1__notes:visited {
+  text-decoration: none;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  color: #4d6fac;
+  }
+
+.gallery1__notes:active, .gallery1__notes:hover {
+  font-weight: bold;
+}
+
+.gallery1__project-description {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.gallery1__project-description:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+
+.gallery1__project-heading {
+  padding-top: 3rem;
+  font-size: 2.2rem;
+}
+
+.gallery1__project-description-box {
+  list-style-position: outside;
+  margin: 0 0 0 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .gallery1__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .gallery1__container {
+    padding: 2.4rem 0 0 0;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .gallery1__item {
+    border: none;
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 2.6rem;
+  }
+  .gallery1__figure {
+    margin: 0;
+  }
+}

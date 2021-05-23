@@ -1,0 +1,359 @@
+<div class="codehilite">
+  <pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+      <span class="c">&lt;!-- Google Lato font --&gt;</span>
+      <span class="p">&lt;</span><span class="nt">link</span>
+        <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&quot;</span>
+        <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;gallery1.css&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Grid Photo Gallery<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container-page&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__heading&quot;</span><span class="p">&gt;</span>
+            Albums from Wings<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span><span class="ni">&amp;mdash;</span><span class="p">&lt;/</span><span class="nt">span</span>
+            <span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__heading--small&quot;</span><span class="p">&gt;</span>My Collection<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  
+          <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__project-heading&quot;</span><span class="p">&gt;</span>Project background<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  
+          <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__project-description-box&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__project-description&quot;</span><span class="p">&gt;</span>
+              This is a responsive image gallery I built using a CSS grid layout.
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__project-description&quot;</span><span class="p">&gt;</span>
+              Click on an album image to toggle between its front and back cover.
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__project-description&quot;</span><span class="p">&gt;</span>
+              To see my project notes and code, click
+              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__notes&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>here<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Wildlife<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image1&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image1-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Wildlife album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_wildlife_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_wildlife_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_wildlife_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image1-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Wildlife album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_wildlife_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_wildlife_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_wildlife_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Wildlife, 1971<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Red Rose Speedway<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image2&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image2-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Red Rose Speedway album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_red_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_red_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_red_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image2-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Red Rose Speedway album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_red_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_red_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_red_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Red Rose Speedway, 1973<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Band on the Run<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image3&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image3-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Band on the Run album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_band_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_band_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_band_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image3-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Band on the Run album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_band_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_band_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_band_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Band on the Run, 1973<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Venus and Mars<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image4&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image4-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Venus and Mars album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_venus_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_venus_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_venus_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image4-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Venus and Mars album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_venus_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_venus_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_venus_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Venus and Mars, 1975<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Wings at the Speed of Sound<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image5&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image5-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings At the Speed of Sound album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_speed_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_speed_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_speed_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image5-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings At the Speed of Sound album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_speed_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_speed_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_speed_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>
+                    Wings at the Speed of Sound, 1976
+                  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Wings Over America<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image6&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image6-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Over America album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_over_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_over_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_over_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image6-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Over America album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_over_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_over_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_over_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Wings Over America, 1976<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>London Town<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image7&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image7-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings London Town album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_london_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_london_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_london_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image7-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings London Town album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_london_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_london_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_london_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>London Town, 1978<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Goodnight 12-inch Disco Single<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image8&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image8-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the Wings Goodnight Tonight 12-inch Disco Single&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_goodnight_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_goodnight_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_goodnight_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image8-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Goodnight Tonight 12-inch Disco Single&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_goodnight_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_goodnight_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_goodnight_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>
+                    Goodnight Tonight 12-inch Disco Single, 1979
+                  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  
+            <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__item&quot;</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;screen_reader_only&quot;</span><span class="p">&gt;</span>Back to the Egg<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figure&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;image9&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image9-front&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Front cover of the</span>
+  <span class="s">                Wings Back to the Egg album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_back_front_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_back_front_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_back_front_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+  
+                  <span class="p">&lt;</span><span class="nt">img</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;image9-back&quot;</span>
+                    <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__image screen_reader_only&quot;</span>
+                    <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Back cover of the Wings Back to the Egg album&quot;</span>
+                    <span class="na">src</span><span class="o">=</span><span class="s">&quot;../photos/wings_albums/sized/wings_back_back_400px.png&quot;</span>
+                    <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_back_back_400px.png 1x,</span>
+  <span class="s">                    ../photos/wings_albums/sized/wings_back_back_800px.png 2x</span>
+  <span class="s">                  &quot;</span>
+                  <span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption-box&quot;</span><span class="p">&gt;</span>
+                  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gallery1__figcaption&quot;</span><span class="p">&gt;</span>Back to the Egg, 1979<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+              <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  
+      <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">function</span> <span class="nx">changeImage</span><span class="p">(</span><span class="nx">imageBoxId</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">const</span> <span class="nx">imageIdFront</span> <span class="o">=</span> <span class="nx">imageBoxId</span> <span class="o">+</span> <span class="s1">&#39;-front&#39;</span><span class="p">;</span>
+          <span class="kd">const</span> <span class="nx">imageIdBack</span> <span class="o">=</span> <span class="nx">imageBoxId</span> <span class="o">+</span> <span class="s1">&#39;-back&#39;</span><span class="p">;</span>
+          <span class="kd">const</span> <span class="nx">imageFront</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">imageIdFront</span><span class="p">);</span>
+          <span class="kd">const</span> <span class="nx">imageBack</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">imageIdBack</span><span class="p">);</span>
+          <span class="nx">imageFront</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;screen_reader_only&#39;</span><span class="p">);</span>
+          <span class="nx">imageBack</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;screen_reader_only&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+  
+        <span class="kd">const</span> <span class="nx">numAlbums</span> <span class="o">=</span> <span class="mf">9</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numAlbums</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">let</span> <span class="nx">idName</span> <span class="o">=</span> <span class="s1">&#39;#image&#39;</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+          <span class="kd">let</span> <span class="nx">album</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">idName</span><span class="p">);</span>
+          <span class="nx">album</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">changeImage</span><span class="p">(</span><span class="nx">idName</span><span class="p">);</span>
+          <span class="p">});</span>
+        <span class="p">}</span>
+      <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+  </code></pre>
+</div>

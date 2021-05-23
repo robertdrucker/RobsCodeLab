@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Lato font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gallery1.css" />
+    <title>Grid Photo Gallery</title>
+  </head>
+  <body>
+    <div class="container-page">
+      <section class="gallery1">
+        <h2 class="gallery1__heading">
+          Albums from Wings<span class="screen_reader_only">&mdash;</span
+          ><span class="gallery1__heading--small">My Collection</span>
+        </h2>
+
+        <p class="gallery1__project-heading">Project background</p>
+
+        <ul class="gallery1__project-description-box">
+          <li class="gallery1__project-description">
+            This is a responsive image gallery I built using a CSS grid layout.
+          </li>
+          <li class="gallery1__project-description">
+            Click on an album image to toggle between its front and back cover.
+          </li>
+          <li class="gallery1__project-description">
+            To see my project notes and code, click
+            <a class="gallery1__notes" href="#">here</a>.
+          </li>
+        </ul>
+
+        <div class="gallery1__container">
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Wildlife</h3>
+            <figure class="gallery1__figure">
+              <div id="image1" class="gallery1__image-box">
+                <img
+                  id="image1-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Wildlife album"
+                  src="../photos/wings_albums/sized/wings_wildlife_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_wildlife_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_wildlife_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image1-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Wildlife album"
+                  src="../photos/wings_albums/sized/wings_wildlife_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_wildlife_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_wildlife_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Wildlife, 1971</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Red Rose Speedway</h3>
+            <figure class="gallery1__figure">
+              <div id="image2" class="gallery1__image-box">
+                <img
+                  id="image2-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Red Rose Speedway album"
+                  src="../photos/wings_albums/sized/wings_red_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_red_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_red_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image2-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Red Rose Speedway album"
+                  src="../photos/wings_albums/sized/wings_red_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_red_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_red_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Red Rose Speedway, 1973</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Band on the Run</h3>
+            <figure class="gallery1__figure">
+              <div id="image3" class="gallery1__image-box">
+                <img
+                  id="image3-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Band on the Run album"
+                  src="../photos/wings_albums/sized/wings_band_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_band_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_band_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image3-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Band on the Run album"
+                  src="../photos/wings_albums/sized/wings_band_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_band_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_band_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Band on the Run, 1973</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Venus and Mars</h3>
+            <figure class="gallery1__figure">
+              <div id="image4" class="gallery1__image-box">
+                <img
+                  id="image4-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Venus and Mars album"
+                  src="../photos/wings_albums/sized/wings_venus_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_venus_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_venus_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image4-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Venus and Mars album"
+                  src="../photos/wings_albums/sized/wings_venus_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_venus_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_venus_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Venus and Mars, 1975</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Wings at the Speed of Sound</h3>
+            <figure class="gallery1__figure">
+              <div id="image5" class="gallery1__image-box">
+                <img
+                  id="image5-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings At the Speed of Sound album"
+                  src="../photos/wings_albums/sized/wings_speed_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_speed_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_speed_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image5-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings At the Speed of Sound album"
+                  src="../photos/wings_albums/sized/wings_speed_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_speed_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_speed_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">
+                  Wings at the Speed of Sound, 1976
+                </p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Wings Over America</h3>
+            <figure class="gallery1__figure">
+              <div id="image6" class="gallery1__image-box">
+                <img
+                  id="image6-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Over America album"
+                  src="../photos/wings_albums/sized/wings_over_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_over_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_over_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image6-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Over America album"
+                  src="../photos/wings_albums/sized/wings_over_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_over_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_over_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Wings Over America, 1976</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">London Town</h3>
+            <figure class="gallery1__figure">
+              <div id="image7" class="gallery1__image-box">
+                <img
+                  id="image7-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings London Town album"
+                  src="../photos/wings_albums/sized/wings_london_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_london_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_london_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image7-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings London Town album"
+                  src="../photos/wings_albums/sized/wings_london_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_london_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_london_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">London Town, 1978</p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Goodnight 12-inch Disco Single</h3>
+            <figure class="gallery1__figure">
+              <div id="image8" class="gallery1__image-box">
+                <img
+                  id="image8-front"
+                  class="gallery1__image"
+                  alt="Front cover of the Wings Goodnight Tonight 12-inch Disco Single"
+                  src="../photos/wings_albums/sized/wings_goodnight_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_goodnight_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_goodnight_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image8-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Goodnight Tonight 12-inch Disco Single"
+                  src="../photos/wings_albums/sized/wings_goodnight_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_goodnight_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_goodnight_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">
+                  Goodnight Tonight 12-inch Disco Single, 1979
+                </p>
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="gallery1__item">
+            <h3 class="screen_reader_only">Back to the Egg</h3>
+            <figure class="gallery1__figure">
+              <div id="image9" class="gallery1__image-box">
+                <img
+                  id="image9-front"
+                  class="gallery1__image"
+                  alt="Front cover of the
+                Wings Back to the Egg album"
+                  src="../photos/wings_albums/sized/wings_back_front_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_back_front_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_back_front_800px.png 2x
+                  "
+                />
+
+                <img
+                  id="image9-back"
+                  class="gallery1__image screen_reader_only"
+                  alt="Back cover of the Wings Back to the Egg album"
+                  src="../photos/wings_albums/sized/wings_back_back_400px.png"
+                  srcset="
+                    ../photos/wings_albums/sized/wings_back_back_400px.png 1x,
+                    ../photos/wings_albums/sized/wings_back_back_800px.png 2x
+                  "
+                />
+              </div>
+              <figcaption class="gallery1__figcaption-box">
+                <p class="gallery1__figcaption">Back to the Egg, 1979</p>
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function changeImage(imageBoxId) {
+        const imageIdFront = imageBoxId + '-front';
+        const imageIdBack = imageBoxId + '-back';
+        const imageFront = document.querySelector(imageIdFront);
+        const imageBack = document.querySelector(imageIdBack);
+        imageFront.classList.toggle('screen_reader_only');
+        imageBack.classList.toggle('screen_reader_only');
+      }
+
+      const numAlbums = 9;
+      let i;
+      for (i = 1; i < numAlbums + 1; i++) {
+        let idName = '#image' + String(i);
+        let album = document.querySelector(idName);
+        album.addEventListener('click', function () {
+          changeImage(idName);
+        });
+      }
+    </script>
+  </body>
+</html>

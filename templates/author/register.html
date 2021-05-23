@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Register | {{ config['BLOG_NAME'] }} {% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+
+  <section class="contact__box">
+    <h2 class="site__heading-1">Site Registration</h2>
+
+    {% include 'messages.html' %}
+
+    {% from "/contact/_contact_form_helpers.html" import render_field %}
+
+    <div class="contact__content">
+
+      <div class="container-form1  container-form1--narrow">
+
+        <form method="POST" action="{{ url_for('.register')}}" class="form1">
+
+          <!-- Creates a CSRF token -->
+          {{ form.hidden_tag()  }}
+
+          <div class="form1__preface-container">
+            <p class="site__content-1">
+              Please complete and submit the form below to become a site member and gain access to all content.  Registration is completely free.
+            </p>
+          </div>
+
+          <div class="form1__group">
+            {{ form.full_name.label(for='full_name', class="form1__label") }}
+            {{ render_field(form.full_name, class='form1__input') }}
+          </div>
+
+          <div class="form1__group">
+            {{ form.email.label(for='email', class="form1__label") }}
+            {{ render_field(form.email, class='form1__input') }}
+          </div>
+
+          <div class="form1__group">             
+            {{ form.password.label(for='password', class="form1__label") }}              
+            {{ render_field(form.password, class='form1__input') }}
+          </div> 
+
+          <div class="form1__group">             
+            {{ form.confirm.label(for='confirm', class="form1__label") }}              
+            {{ render_field(form.confirm, class='form1__input') }}
+          </div> 
+
+  
+          <div class="form1__group form1__group--btn">
+            <!-- Here we will need a real btn element, not just an anchor element. 
+            This is because only a btn will let you submit the form. -->
+            <button type="submit" class="form1__btn form1__btn--green">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>        
+  </section>
+</div>
+
+{% endblock %}

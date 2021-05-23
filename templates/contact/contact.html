@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | {{ config['BLOG_NAME'] }} {% endblock %}
+
+{% block nav %}{% include 'nav.html' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-page">
+  <section class="contact__box">
+    <h2 class="site__heading-1">Contact Me</h2>
+
+    {% include '_flashmessages.html' %}
+
+    {% from "/contact/_contact_form_helpers.html" import render_field %}
+
+    <div class="contact__content">
+
+      <div class="container-form1">
+
+        <form method="POST" action="{{ url_for('.contact')}}" class="form1" role="form">
+
+          {{ form.hidden_tag()  }}
+
+          <div class="form1__preface-container">
+            <p class="site__content-1">
+              I am always interested to hear from fellow coders.  You can contact me via the form below, or by sending your feedback to Robert@RobertDrucker.com.
+            </p>
+            <p class="site__content-1">
+              Thank you for your correspondence.
+            </p>
+            <!-- IcoMoon SVG -->
+            <div class="form1__icon-box">
+              <svg class="form1__icon icon_display">
+                <use xlink:href="{{(url_for('static', filename='display.svg'))}}#icon-display"></use>
+              </svg>
+
+            </div>
+          </div>
+
+          <div class="form1__group">
+            {{ form.name.label(for='name', class="form1__label") }}
+            {{ render_field(form.name, class='form1__input') }}
+          </div>
+
+          <div class="form1__group">             
+            {{ form.email.label(for='email', class="form1__label") }}              
+            {{ render_field(form.email, class='form1__input') }}
+          </div> 
+
+          <div class="form1__group"> 
+            {{ form.message.label(for='message', class="form1__label") }}   
+            {{ render_field(form.message, class='form1__input form1__input--textarea') }}
+          </div> 
+  
+          <div class="form1__group form1__group--btn">
+            <button type="submit" class="form1__btn form1__btn--green">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>        
+  </section>
+</div>
+{% endblock %}

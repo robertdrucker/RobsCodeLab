@@ -1,0 +1,34 @@
+<section>
+  <h2 class="screen_reader_only">Comments</h2>
+  <div id="result" class="comments--container">
+    {% for comment in comments %}
+      <div class="comment">
+        <div class="comment--metadata">
+          <div class="comment--avatar">
+            <img class="comment--avatar" src="https://www.gravatar.com/avatar/{{comment.avatar_hash}}?s=75&r=pg&d=mp" alt="avatar"/>
+          </div>
+          <div class="comment--name-and-date">
+            <div class="comment--name-container">
+              <span class="comment--name">{{comment.name}}</span>
+            </div>
+            <div class="comment--date-container">
+              <span class="comment--date">{{comment.comment_date.strftime('%b %d, %Y')}}</span>
+            </div>
+          </div>
+        </div> 
+        <div class="comment--feedback-container">
+          <p class="comment--feedback">
+            {{comment.comment}}
+          </p>
+        </div> 
+      </div> 
+    {% endfor %}
+  </div>
+  
+  {% if comments_total > max_initial_comments %}
+  <div class="comments__options-box">
+    <button id="comments-load-options" class="comments__load">See more</button>
+    <button id="comments-reset" class="comments__reset  comments__reset--hide">Reset</button>      
+  </div>
+  {% endif %}
+</section>

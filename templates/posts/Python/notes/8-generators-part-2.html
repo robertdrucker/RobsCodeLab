@@ -1,0 +1,125 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      The Python <code>range</code> function is a generator, and in this post we
+      look at how <code>range</code> works under the hood. This is accomplished
+      by creating our own range class and incorporating an iterator protocol
+      into it. We then create an instance of our custom class and use a custom
+      <code>for</code> statement to iterate over it. This post is a follow-up to
+      <a
+        class="gallery1__notes"
+        href="/posts/3-generators-part-1"
+        target="_blank"
+        >Generators, Part 1</a
+      >.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        generator, yield, iterable, iterator protocol, lazy iterator
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__notes-item notes__font-size-1">
+        A generator instance contains both an
+        <code>__iter__</code> and a <code>__next__</code> dunder method.
+        Collectively, these are referred to as the
+        <span class="boldit">iterator protocol</span>.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        Recall that the range function is a generator, and every generator can
+        be iterated over.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        To better understand how a generator works underneath the hood in
+        Python, refer to the code below (Figure 1). This code mimics both the
+        Python <code>range</code> function and the <code>for</code> loop.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        For an iterable object to be iterated upon in Python, either directly or
+        behind the scenes, it must be passed into the built-in function
+        <code>iter()</code>. This creates an iterator.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        The Python built-in <code>next()</code> function is used to get the next
+        value from the created iterator.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        Referring to the code example, note that the the iterable object
+        (<code>rangeGen</code>) is passed into the <code>for</code> loop
+        (<code>custom_for</code>). Inside of <code>custom_for</code>, note use
+        of the <code>iter()</code> and <code>next()</code> functions. For each
+        of these built-in functions to work properly, the iterable
+        (<code>rangeGen</code>) must have a defined iterator protocol. That is,
+        <code>iter()</code> depends on the <code>__iter__</code> dunder method
+        and <code>next</code> depends on <code>__next__</code> dunder method.
+      </li>
+
+      <li class="notes__notes-item notes__font-size-1">
+        This is a lot to wrap your head around, and the best way to understand
+        how all of the pieces relate to each other is to play around with the
+        code.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite>Complete Python Developer in 2021</cite>, Section 10:
+        <cite>Advanced Python: Generators</cite>, by Zero to Mastery
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        <a
+          class="gallery1__notes"
+          target="_blank"
+          href="https://realpython.com/python-for-loop"
+          ><cite>Real Python - Python &ldquo;for&rdquo; Loops</cite></a
+        >
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section notes__section--code">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">Figure 1 - Generators, Part 2</h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - Generators, Part 2
+          </summary>
+          {% include 'posts/Python/code/%s-1.html' % post.slug %}
+
+          <figure class="notes__figure notes__figure--large">
+            <img
+              class="notes__image"
+              alt="Invocation of generators_part_2.py and output"
+              src="{{ url_for('static', filename='images/blog/code_output/Python/8_generators_part_2/generators_part_2_600px.jpeg') }}"
+              srcset="{{ url_for('static', filename='images/blog/code_output/Python/8_generators_part_2/generators_part_2_600px.jpeg') }} 1x, {{ url_for('static', filename='images/blog/code_output/Python/notes/8_generators_part_2/generators_part_2_600px.jpeg') }} 2x"
+            />
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of generators_part_2.py
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>

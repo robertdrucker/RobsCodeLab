@@ -1,0 +1,135 @@
+<div class="notes__box">
+  <section class="notes__section">
+    <h2 class="notes__heading">Summary</h2>
+    <p class="notes__summary notes__font-size-1">
+      Here are notes and code behind my project
+      <a class="gallery1__notes" href="/projects/gallery/wings" target="_blank"
+        >Wings Photo Gallery</a
+      >. This project features an image gallery that was built using a CSS grid
+      layout and a little bit of JavaScript. Additionally, media queries were
+      incorporated into the mark-up language to make the project page
+      responsive.
+    </p>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Key Words</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        grid container, column axis, row axis, grid item, grid line, gutter,
+        track, grid area, grid cell
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Notes</h2>
+    <ul class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        Unlike flexbox, which is one dimensional, a grid allows us to make
+        two-dimensional layouts. That is, a grid can span items across multiple
+        columns and multiple rows.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        This project uses a one-dimensional grid system, so it could have been
+        built using flexbox equally well.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        The CSS grid and flexbox layouts essentially make float designs
+        unnecessary and obsolete. Thank goodness for this. Float designs are
+        generally messy, difficult to implement, and hard to read.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        There are many grid properties, and only a few are used in this project.
+        More advanced grid features will appear in future projects.
+      </li>
+
+      <li class="notes__list-item notes__font-size-1">
+        For more information about CSS grids, see the references below.
+      </li>
+    </ul>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">Images</h2>
+    <h3 class="screen_reader_only">Anatomy of a CSS Grid</h3>
+    <figure class="notes__figure notes__figure--large">
+      <img
+        class="notes__image notes__image--with-border"
+        alt="Anatomy of a CSS grid"
+        src="{{ url_for('static', filename='images/blog/notes/anatomy-css-grid-600px.jpg') }}"
+        srcset="{{ url_for('static', filename='images/blog/notes/anatomy-css-grid-600px.jpg') }} 1x, {{ url_for('static', filename='images/blog/notes/anatomy-css-grid-600px.jpg') }} 2x"
+      />
+      <figcaption class="notes__figcaption-box">
+        <p class="notes__figcaption">
+          You should know the basic terms that describe a CSS grid layout.
+          Illustration by Robert Drucker.
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="notes__section">
+    <h2 class="notes__heading">References</h2>
+    <ol class="notes__list">
+      <li class="notes__list-item notes__font-size-1">
+        <cite
+          >Modern HTML & CSS From The Beginning (Including Sass), Section 11:
+          CSS Grid</cite
+        >, by Brad Traversy.
+      </li>
+      <li class="notes__list-item notes__font-size-1">
+        <cite
+          >Advanced CSS and SASS: Flexbox, Grid, Animations and More! (Including
+          Sass), Section 8: A Quick Introduction to Grid Layouts</cite
+        >, by Jonas Schmedtmann.
+      </li>
+    </ol>
+  </section>
+
+  <div>
+    <section class="notes__section notes__section--code">
+      <h2 class="notes__heading">Code</h2>
+      <section>
+        <h2 class="screen_reader_only">
+          Figure 1 - HTML and JavaScript for Wings Photo Gallery
+        </h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 1 - HTML and JavaScript for Wings Photo Gallery
+          </summary>
+          {% include 'posts/CSS/code/%s-1.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of spread-and-rest-operators.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+
+      <section>
+        <h2 class="screen_reader_only">
+          Figure 2 - CSS for Wings Photo Gallery
+        </h2>
+        <details class="notes__details">
+          <summary class="notes__details-summary">
+            Figure 2 - CSS for Wings Photo Gallery
+          </summary>
+          {% include 'posts/CSS/code/%s-2.html' % post.slug %}
+          <figure class="notes__figure notes__figure--large">
+            <figcaption class="notes__figcaption-box">
+              <p class="notes__figcaption">
+                Invocation of spread-and-rest-operators.js
+              </p>
+            </figcaption>
+          </figure>
+        </details>
+      </section>
+    </section>
+  </div>
+</div>
